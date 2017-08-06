@@ -1,5 +1,5 @@
-#r "nuget: NETStandard.Library,1.6.1"
 #r "nuget: Newtonsoft.Json,9.0.1"
+#r "nuget: NETStandard.Library,1.6.1"
 #load "user.csx"
 
 using Newtonsoft.Json;
@@ -13,7 +13,7 @@ if (!string.IsNullOrWhiteSpace(startWith)) {
 }
 
 Console.WriteLine("Processing users!");
-var rawJson = File.ReadAllText(@"\\Mac\Home\Documents\dev\ndc-sydney-2017-demos\scripting\dotnet-script-demo\users.json");
+var rawJson = File.ReadAllText("users.json");
 var users = JsonConvert.DeserializeObject<User[]>(rawJson);
 
 var filteredUsers = users.Where(x => x.Name.StartsWith(startWith));

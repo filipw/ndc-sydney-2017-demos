@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ".NET Script Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "dotnet",
+            "args": [
+              "exec", 
+              "\\\\Mac\\Home\\Documents\\dev\\ndc-sydney-2017-demos\\scripting\\tools\\dotnet-script\\dotnet-script.dll",
+              "${file}"
+            ],
+            "cwd": "${workspaceRoot}",
+            "externalConsole": false,
+            "stopAtEntry": true,
+            "internalConsoleOptions": "openOnSessionStart",
+            "requireExactSource": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            //"processName": "${command:"
+            "processId": "${command:pickProcess}"
+        }
+    ]
+}
