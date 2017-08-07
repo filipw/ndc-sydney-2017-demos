@@ -12,16 +12,12 @@
               "${file}"
             ],
             "cwd": "${workspaceRoot}",
-            "externalConsole": false,
-            "stopAtEntry": true,
-            "internalConsoleOptions": "openOnSessionStart",
-            "requireExactSource": false
+            "stopAtEntry": true
         },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
             "request": "attach",
-            //"processName": "${command:"
             "processId": "${command:pickProcess}"
         }
     ]
